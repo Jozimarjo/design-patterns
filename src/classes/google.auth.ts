@@ -1,4 +1,4 @@
-import { Authenticacao } from "../../src/interfaces/authenticacao.interface";
+import { Authenticacao } from "../interfaces/authenticacao.interface";
 import * as jwt from 'jsonwebtoken';
 
 export class GoogleAuth implements Authenticacao{
