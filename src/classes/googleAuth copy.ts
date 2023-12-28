@@ -2,7 +2,7 @@ import { Authenticacao } from "../../src/interfaces/authenticacao.interface";
 import * as jwt from 'jsonwebtoken';
 
 export class GoogleAuth implements Authenticacao{
-  private key ='instagramKey'
+  private key ='googleKey'
   auth(token: string): boolean {
     const cleanToken = this.decodeToken(token)
     if(cleanToken)
@@ -14,17 +14,17 @@ export class GoogleAuth implements Authenticacao{
     const label= token.split(' ')[0];
     const tokenDecoded= token.split(' ')[1];
     
-    if(label && label==='instagram'){
+    if(label && label==='google'){
       return tokenDecoded;
     }
   }
   private verify(token: string){
     try {
         const decode = jwt.verify(token, this.key)
-        console.log('Authenticacao Instagram: ',decode)
+        console.log('Authenticacao Google: ',decode)
         return true;
     } catch (error) {
-      console.log('Authenticacao Instagram: token expirado as:',error.expiredAt)
+      console.log('Authenticacao Google: token expirado as:',error.expiredAt)
       return false;
     }
   }
