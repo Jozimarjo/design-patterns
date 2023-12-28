@@ -3,6 +3,7 @@
 ## Descrição do Desafio
 
 Seu código deve analisar um token e verificar se ele é válido, além de determinar qual autenticador usar. O desafio já fornecerá classes de autenticação chamadas `FacebookAuth` e `GoogleAuth`.
+Caso o token esteja valido , deve imprimir 'Acesso Permitido!' caso contrario deve imprimir 'Acesso negado!'
 
 ## Instruções para Execução
 
