@@ -1,7 +1,7 @@
 import { Authenticacao } from "../../src/interfaces/authenticacao.interface";
 import * as jwt from 'jsonwebtoken';
 
-export class InstagramAuth implements Authenticacao{
+export class GoogleAuth implements Authenticacao{
   private key ='instagramKey'
   auth(token: string): boolean {
     const cleanToken = this.decodeToken(token)
