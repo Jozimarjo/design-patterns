@@ -1,5 +1,3 @@
-import { FacebookAuth } from "src/classes/facebook.auth";
-import { GoogleAuth } from "../classes/google.auth";
 
 export abstract class AuthHandle{
   nextAuthHandle: AuthHandle;
